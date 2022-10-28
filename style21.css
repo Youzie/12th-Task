@@ -1,0 +1,192 @@
+@charset "UTF_8";
+
+body {
+  margin: 0;
+  background-color: rgb(228, 241, 253);
+  
+}
+
+.grid-container {
+  padding: 25px;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* 上部ラッパー */
+.grid.wrapper1 {
+  display: grid;
+  grid-template: 
+  "item-one item-two  " 280px
+  "item-one item-three" 280px 
+  / 550px 550px;
+  gap: 40px 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.hero {
+  grid-area: item-one;
+  border-radius: 8px;
+}
+
+.headline {
+  grid-area: item-two;
+  border-radius: 8px;
+}
+
+.grid-item.logo {
+  grid-area: item-three;
+ position: relative;
+ border-radius: 8px;
+}
+
+.photo.logo {
+  height: 70%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 590px) {
+  .grid-container {
+    width: 90vw;
+    padding: 5vw;
+  }
+
+  .grid.wrapper1 {
+    display: grid;
+    grid-template: 
+    "item-two  " 200px
+    "item-three" 200px 
+    "item-one  " 400px
+    / 90vw;
+    gap: 20px 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .headline {
+    border: hidden;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .grid-item.logo {
+    grid-area: item-three;
+   position: relative;
+   border-radius: 8px;
+  }
+  
+  .photo.logo {
+    height: 70%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+
+/* 下部ラッパー */
+.grid.wrapper2 {
+  width: 1150px;
+  display: grid;
+  grid-template: 
+  "item-four  item-five  item-six  " 200px
+  "item-seven item-eight item-eight" 200px 
+  "item-nine  item-nine  item-ten  " 200px 
+  "item-nine  item-nine  item-ten  " 200px
+  /1fr 1fr 1fr; 
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+
+.topic1 {
+  grid-area: item-four;
+  border-radius: 8px;
+}
+
+.topic2 {
+  grid-area: item-five;
+  border-radius: 8px;
+}
+
+.topic3 {
+  grid-area: item-six;
+  border-radius: 8px;
+}
+
+.topic4 {
+  grid-area: item-seven;
+  border-radius: 8px;
+}
+
+.topic5 {
+  grid-area: item-eight;
+  border-radius: 8px;
+}
+
+.topic6 {
+  grid-area: item-nine;
+  border-radius: 8px;
+}
+
+.topic7 {
+  grid-area: item-ten;
+  border-radius: 8px;
+}
+
+
+
+
+.grid-item {
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline {
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 590px) {
+  .grid.wrapper2 {
+    width: 90vw;
+    display: grid;
+    grid-template: 
+    "item-four item-five  " 100px
+    "item-six item-seven  " 100px 
+    "item-eight item-eight" 100px
+    "item-nine item-ten   " 100px
+    "item-nine item-ten   " 100px  
+    / 43vw 43vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    gap: 4vw;
+  }
+
+  .headline {
+    border: 0px;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
